@@ -75,7 +75,7 @@ public class FeedController {
 		
 	}
 
-	@RequestMapping("feeds/details/{id}")
+	@RequestMapping(value = "/feeds/details/{id}", method = RequestMethod.GET)
 	public String getFeedDetailsById(@PathVariable("id") int id, Model model){
 
 		model.addAttribute("messages", new FeedMessage());
